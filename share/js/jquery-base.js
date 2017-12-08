@@ -8,7 +8,7 @@ var __CONSTANT__DATA = {
 	"ios": {
 		"schemeUrl": "spdbccc://",
 		"downloadUrl": "https://itunes.apple.com/cn/app/pu-fa-yin-xing-xin-yong-ka/id974428942?mt=8",
-		"weixinUrl": "https://blog.d0zingcat.xyz/spdbcccMbank/ios/share.html"
+		"weixinUrl": "https://mbank.spdbccc.com.cn/spdbcccMbank/ios/share.html"
 	},
 	"iosLismitVersion": 9 // IOS判定的最低版本号
 };
