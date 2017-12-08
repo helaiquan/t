@@ -1,0 +1,39 @@
+/** IE 8 样式 */
+.rootCase {
+	background: none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="https://mbank.spdbccc.com.cn/spdbcccMbank/share/images/page_download.png", sizingMethod="scale");
+}
+.r_open {
+	background: none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="https://mbank.spdbccc.com.cn/spdbcccMbank/share/images/btn_open_moren.png", sizingMethod="scale");
+}
+.r_open_on {
+	background: none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="https://mbank.spdbccc.com.cn/spdbcccMbank/share/images/btn_open_anxia.png", sizingMethod="scale");
+}
+.r_download {
+	background: none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="https://mbank.spdbccc.com.cn/spdbcccMbank/share/images/btn_download_moren.png", sizingMethod="scale");
+}
+.r_download_on {
+	background: none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="https://mbank.spdbccc.com.cn/spdbcccMbank/share/images/btn_download_anxia.png", sizingMethod="scale");
+}
+.r_first {
+	background: none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="https://mbank.spdbccc.com.cn/spdbcccMbank/share/images/img_yindao01.png", sizingMethod="scale");
+}
+.r_second {
+	background: none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="https://mbank.spdbccc.com.cn/spdbcccMbank/share/images/img_yindao02.png", sizingMethod="scale");
+}
+.r_ikonw {
+	background: none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="https://mbank.spdbccc.com.cn/spdbcccMbank/share/images/btn_wozhidaole.png", sizingMethod="scale");
+}
+.maskRoot {
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#80000000,endColorstr=#80000000);
+}
+.alertRoot {
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#80000000,endColorstr=#80000000);
+}
