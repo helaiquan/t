@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no" />
+<meta http-equiv="Cache-Control" content="no-cache" />
+<meta name="apple-itunes-app" content="app-id=477927812" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<title>浦大喜奔APP分享</title>
+<link type="text/css" rel="stylesheet" href="share/css/base.css?version=2.0.3" />
+<!--[if IE 8]>
+<link type="text/css" rel="stylesheet" media="all" href="share/css/base-ie8.css" />
+<![endif]-->
+<script type="text/javascript" src="share/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="share/js/jquery-base.js?version=2.0.3"></script>
+<script type="text/javascript">
+
+// 页面加载完自动启动事件
+function mainEvent(r_open) {
+	// 默认点击打开按钮
+	var eventName = "touchend";
+	if (__Device == "computer") eventName = "click";
+	r_open.trigger(eventName);
+}
+
+// 打开事件
+function openEvent(r_open, e) {
+	try {
+		openClientApp();
+	} catch(e) {
+		msgAlert("系统异常，请稍后再试！");
+	}
+}
+
+// 下载事件
+function downloadEvent(r_download, e) {
+	if (__Device == "computer") {
+		msgAlert("非安卓或IOS手机用户，无法打开！");
+	} else {
+		window.location = __CONSTANT__DATA[__Device].downloadUrl;
+	}
+}
+
+// 打开客户端
+function openClientApp() {
+	if (__Device == "computer") {
+		msgAlert("非安卓或IOS手机用户，无法打开！");
+	} else if (__Device == "android") { // 安卓
+		try {
+			var url = __CONSTANT__DATA[__Device].schemeUrl + location.search;
+			if ($.isWeiXin()) {
+				// 20171030 安卓打开app优化
+				url = __CONSTANT__DATA[__Device].weixinUrl + encodeURI(url);
+			}
+			window.location = url;
+		} catch(e) {
+			msgAlert("没有安装APP");
+		}
+	} else if (__Device == "ios") { // 苹果
+		try {
+			var url = location.search;
+			var iosVersion = $.iosVersion();
+			if (iosVersion >= __CONSTANT__DATA.iosLismitVersion) { // 9以上系统
+				url = __CONSTANT__DATA[__Device].weixinUrl + url
+			} else {
+				url = __CONSTANT__DATA[__Device].schemeUrl + url.substring(1);
+			}
+			window.location = url;
+		} catch(e) {
+			msgAlert("没有安装APP");
+		}
+	}
+}
+</script>
+</head>
+<body>
+	
+	<!-- 内容 -->
+	<div class="rootCase">
+		<div class="r_open_d r_open"></div>
+		<div class="r_download_d r_download"></div>
+	</div>
+
+	<!-- 幕布 -->
+	<div class="maskRoot">
+		<div class="r_first"></div>
+		<div class="r_second"></div>
+		<div class="r_ikonw"></div>
+	</div>
+
+	<!-- 模拟弹窗 -->
+	<div class="alertRoot">
+		<div class="alertContent">
+			<div class="alertTitle">提示</div>
+			<div class="alertTip"><table><tr><td></td></tr></table></div>
+			<div class="alertButton">确定</div>
+		</div>
+	</div>
+</body>
+</html>
